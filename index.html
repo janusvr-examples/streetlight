@@ -1,0 +1,19 @@
+<FireBoxRoom>
+<Assets>
+<AssetScript src="pushbutton.js"/>
+<AssetScript src="slider.js"/>
+<AssetScript id="streetlight" src="streetlight.js" />
+</Assets>
+<Room>
+<object pos="0 .2 2" xdir="-1 0 0" zdir="0 0 -1" >
+     <Text col="#0000ff" font_scale="false" font_size=".05" pos="-.5 .15 .2" scale="1 1 .2">&lt;pushButton&gt;</Text>
+     <PushButton height=".2" length=".2" onclick="room.objects['mylamp'].toggleLight()" pos="-.5 0 .5" width=".2"/>
+     <Text col="#4cb96f" font_scale="false" font_size=".05" pos=".2 .15 .2" scale="1 1 .2">&lt;slider&gt;</Text>
+     <Slider max="15" min="0" onchange="room.objects['mylamp'].setBrightness(this.value)" pos=".2 0 .5" value="8"/>
+     <Text col="#4cb96f" font_scale="false" font_size=".05" pos=".8 1.0 -.2" scale="1 1 .2">&lt;streetLight&gt;</Text>
+     <StreetLight col="#ff5" js_id="mylamp" light_pos=".25 1.5 0" model_id="streetlamp2.obj.gz" model_pos="0 .5 0" pos=".5 0 0"/>
+     <object col="#ccc" collision_id="cube" id="cube" pos="0 0 0" scale="2.5 .05 .8"/>
+    </object>
+</Room>
+</FireBoxRoom>
+
