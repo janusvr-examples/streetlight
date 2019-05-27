@@ -1,0 +1,11 @@
+<FireBoxRoom>
+<Assets>
+<AssetScript src="LightSwitch.js" />
+</Assets>
+<Room use_local_asset="room_plane" >
+<Object id="cube" js_id="stopcube" onclick="LightS()" pos="-1 0 8" col="#ff0000" collision_id="cube" />
+<Object id="cube" js_id="playcube" onclick="LightP()" pos="1 0 8" col="#00ff00" collision_id="cube" />
+<Light js_id="OmniLight" pos="0 3 7" col="#ff9900" light_intensity="10" light_cone_angle="0" light_cone_exponent="10" light_range="15" light_shadow="true" />
+</Room>
+</FireBoxRoom>
+
